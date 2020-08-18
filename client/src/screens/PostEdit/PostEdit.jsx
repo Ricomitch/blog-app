@@ -48,3 +48,5 @@ const PostEdit = (props) => {
 
 
 }
+
+export default PostEdit

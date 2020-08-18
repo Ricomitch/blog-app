@@ -1,6 +1,6 @@
-import Layout from '../../components/shared/Layout/Layout';
+import React, {useState} from 'react'
 import { Redirect } from 'react-router-dom';
-import { createProduct } from '../../services/products';
+import { createPost } from '../../services/posts';
 
 const PostCreate = (props) => {
   const [post, setPost] = useState({

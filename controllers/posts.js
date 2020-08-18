@@ -17,15 +17,6 @@ const getPosts = async (req, res) => {
   }
 }
 
-const getUsers = async (req, res) => {
-  try {
-    const users = await User.find().populate('posts')
-    res.json(users)
-  } catch (error) {
-    errorHandler500(error)
-  }
-}
-
 const getPost = async (req, res) => {
   try {
     const { id } = req.params
@@ -38,6 +29,17 @@ const getPost = async (req, res) => {
     errorHandler500(error)
   }
 }
+
+const getUsers = async (req, res) => {
+  try {
+    const users = await User.find().populate('posts')
+    res.json(users)
+  } catch (error) {
+    errorHandler500(error)
+  }
+}
+
+
 
 const createPost = async (req, res) => {
   try {
@@ -62,7 +64,7 @@ const updatePost = async (req, res) => {
   })
 }
 
-deletePost = async (req, res) => {
+const deletePost = async (req, res) => {
   try {
     const { id } = req.params
     const deleted = await Post.findByIdAndDelete(id)

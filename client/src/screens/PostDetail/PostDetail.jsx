@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { getPost, deletePost } from '../../services/posts'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, Redirect, useHistory } from 'react-router-dom'
 import './PostDetail.css'
 
 const PostDetail = (props) => {
   const [post, setPost] = useState(null)
   const [isLoaded, setLoaded] = useState(false)
   const { id } = useParams()
+
+  const history = useHistory()
 
   useEffect(() => {
     async function fetchPost() {
@@ -33,7 +35,10 @@ const PostDetail = (props) => {
             <button className='edit-button'>
               <Link className='edit-link' to={`/posts/${post._id}/edit`}>Edit</Link>
             </button>
-            <button className='delete-button' onClick={() => deletePost(post._id)}>
+            <button className='delete-button' onClick={() => {
+              deletePost(post._id);
+              history.push('/posts')
+            }} >
               Delete
             </button>
           </div>

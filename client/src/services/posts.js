@@ -1,6 +1,4 @@
 import api from "./apiConfig";
-import { Redirect } from 'react-router-dom'
-import React from 'react'
 
 export const getPosts = async () => {
   try {
@@ -41,7 +39,7 @@ export const updatePost = async (id, post) => {
 export const deletePost = async (id) => {
   try {
     const response = await api.delete(`/posts/${id}`);
-    return <Redirect to={`/posts`} />
+    return response.data
   } catch (error) {
     throw error;
   }

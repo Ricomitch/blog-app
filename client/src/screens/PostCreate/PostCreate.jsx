@@ -45,7 +45,7 @@ const PostCreate = (props) => {
   }
 
   return (
-    <form className='create-form' onSubmit={(e)=>handleSubmit(e)}>
+    <form className='create-form' onSubmit={(e) => post.userId==='' ? alert('Please select an author') : handleSubmit(e)}>
       <input
         className='input-title'
         placeholder='Title'

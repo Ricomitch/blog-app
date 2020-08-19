@@ -17,7 +17,7 @@ const main = async () => {
   await user3.save()
 
   const post1 = new Post({
-    title: faker.company.catchPhrase(),
+    title: faker.company.catchPhrase().substr(0,27),
     imgURL: faker.image.imageUrl(400, 300, undefined, true),
     content: faker.lorem.paragraphs(),
     userId: user1._id,
@@ -25,7 +25,7 @@ const main = async () => {
   await post1.save()
 
   const post2 = new Post({
-    title: faker.company.catchPhrase(),
+    title: faker.company.catchPhrase().substr(0,27),
     imgURL: faker.image.imageUrl(400, 300, undefined, true),
     content: faker.lorem.paragraphs(),
     userId: user2._id,

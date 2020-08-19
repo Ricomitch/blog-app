@@ -1,0 +1,24 @@
+.posts {
+  overflow-y: scroll;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  height: 650px;
+}
+
+.posts a {
+  text-decoration: unset;
+  color: unset;
+}
+
+@media screen and (min-width: 800px) {
+  .posts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+}
+/*# sourceMappingURL=main.css.map */

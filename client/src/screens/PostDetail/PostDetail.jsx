@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { getPost, deletePost } from '../../services/posts'
 import { useParams, Link } from 'react-router-dom'
+import './PostDetail.css'
 
 const PostDetail = (props) => {
   const [post, setPost] = useState(null)

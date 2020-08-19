@@ -11,23 +11,40 @@ function Posts() {
       const posts = await getPosts()       
       setAllPosts(posts)
     }
+    
     fetchPosts()
   }, [])
+
+  const fetchPosts = async () => {
+    let posts = await getPosts()
+    // posts = posts.map(post => {
+    //   console.log('line 17',post.userId)
+    //   //return post.title = capitalized(post.title)
+    //   return post.title
+    // })
+    setAllPosts(posts)
+
+  }
   
   const capitalized = (input) => {
     let splitWords = input.split(' ')
-    // console.log(splitWords)
     const result = splitWords.map(word => `${word.charAt(0).toUpperCase()}${word.substring(1)}`)
-    console.log(result)
     return result.join(' ')
   }
-  
+
   const postsJSX = allPosts.map((post, index) => {
-    console.log(post.userId.username)
-    return <Post _id={post._id} title={capitalized(post.title)} imgURL={post.imgURL} textSample={post.content} key={index} authorName={post.userId.username} />
-  })
+    return (
+      <Post 
+        _id={post._id} 
+        title={capitalized(post.title)} 
+        imgURL={post.imgURL} 
+        textSample={post.content} 
+        authorName={post.userId.username} 
+        key={index} 
+        authorName={post.userId.username} 
+      />
+  )})
   
-  console.log(allPosts)
   return (
     <div className="posts-container">
       {/* <Search onSubmit={handleSubmit} onChange={handleSearch} />

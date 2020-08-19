@@ -76,6 +76,7 @@
       justify-content: center;
       align-items: center;
   }
+
 }
 
 @media (max-width: 800px) {
@@ -85,8 +86,7 @@
       padding: 10px;
   }
   .post-detail {
-      padding: 0px;
-      padding-top: 120px;
+      padding: 40px;
       /* margin: 0px; */
       /* display: flex;
       flex-direction: column;

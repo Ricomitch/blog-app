@@ -6,7 +6,7 @@ body {
   overflow-y: scroll;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
-  height: 650px;
+  height: 90vh;
 }
 
 .posts a {
@@ -25,4 +25,4 @@ body {
             flex-flow: row wrap;
   }
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=Posts.css.map */

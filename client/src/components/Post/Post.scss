@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Asset&family=Monofett&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Asset&family=Monofett&display=swap");
 
 .post {
   display: flex;
@@ -21,35 +21,30 @@
     font-size: 3.5rem;
     overflow-wrap: break-word;
   }
-  
-.img-title-container {
-  position: relative;
-  text-align: center; 
-  img {
-    max-width: 100%;
-    filter: brightness(70%);
-  }
-  &:hover {
-    text-shadow: 1px 1px 4px black;
-    img {
-      filter: brightness(50%);
-  }
-}
-}
-.sub-title {
-  
-  .summary-text {
-  letter-spacing: .9px;
-  
-  }
-}
-}
 
+  .img-title-container {
+    position: relative;
+    text-align: center;
+    img {
+      max-width: 100%;
+      filter: brightness(70%);
+    }
+    &:hover {
+      text-shadow: 1px 1px 4px black;
+      img {
+        filter: brightness(50%);
+      }
+    }
+  }
+  .sub-title {
+    .summary-text {
+      letter-spacing: 0.9px;
+    }
+  }
+}
 
 @media screen and (min-width: 1240px) {
   .post {
-    scroll-snap-align: end;
+    scroll-snap-align: unset;
   }
-  }
-
-  
+}

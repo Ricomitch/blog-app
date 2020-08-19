@@ -11,20 +11,8 @@ function Posts() {
       const posts = await getPosts()       
       setAllPosts(posts)
     }
-    
     fetchPosts()
   }, [])
-
-  const fetchPosts = async () => {
-    let posts = await getPosts()
-    // posts = posts.map(post => {
-    //   console.log('line 17',post.userId)
-    //   //return post.title = capitalized(post.title)
-    //   return post.title
-    // })
-    setAllPosts(posts)
-
-  }
   
   const capitalized = (input) => {
     let splitWords = input.split(' ')

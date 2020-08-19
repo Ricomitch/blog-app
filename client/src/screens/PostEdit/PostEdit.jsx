@@ -62,7 +62,8 @@ const PostEdit = (props) => {
             placeholder='Title'
             value={post.title}
             name='title'
-            requiredonChange={handleChange}
+            required
+            onChange={handleChange}
           />
           <textarea
             className='textarea-content'

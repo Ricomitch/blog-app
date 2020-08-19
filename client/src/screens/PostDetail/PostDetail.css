@@ -35,8 +35,8 @@
   font-size: 22px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  height: 40px;
-  width: 20%;
+  height: 30px;
+  width: 90px;
   align-self: center;
   margin-top: 40px;
   background-color: black;
@@ -44,10 +44,12 @@
   border: none;
   box-shadow: 2px 2px 10px 2px #CECECE;
   cursor: pointer;
+  padding: 5px;
 }
 
 .edit-link {
   color: white;
+  text-decoration: none;
 }
 
 @media (max-width: 1024px) {

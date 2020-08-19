@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getPost, deletePost } from '../../services/posts'
-import { useParams, Link, Redirect, useHistory } from 'react-router-dom'
+import { useParams, Link, useHistory } from 'react-router-dom'
 import './PostDetail.css'
 
 const PostDetail = (props) => {

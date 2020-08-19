@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { getPost, deletePost } from '../../services/posts'
 import { useParams, Link } from 'react-router-dom'
+import './PostDetail.css'
 
 const PostDetail = (props) => {
   const [post, setPost] = useState(null)
@@ -28,7 +29,6 @@ const PostDetail = (props) => {
         <div className='detail'>
           <div className='title'>{post.title}</div>
           <div className='content'>{post.content}</div>
-          <div className='userId'>{post.userId}</div>
           <div className='button-container'>
             <button className='edit-button'>
               <Link className='edit-link' to={`/posts/${post._id}/edit`}>Edit</Link>

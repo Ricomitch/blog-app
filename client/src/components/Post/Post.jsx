@@ -1,6 +1,6 @@
-import React from 'react'
-import './Post.css'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import './Post.css';
+import { Link } from 'react-router-dom';
 
 function Post(props) {
 
@@ -22,4 +22,4 @@ function Post(props) {
 
 }
 
-export default Post
+export default Post;

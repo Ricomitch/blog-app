@@ -32,7 +32,7 @@ const getPost = async (req, res) => {
 
 const getUsers = async (req, res) => {
   try {
-    const users = await User.find().populate('posts')
+    const users = await User.find()
     res.json(users)
   } catch (error) {
     errorHandler500(error, res)
@@ -40,6 +40,7 @@ const getUsers = async (req, res) => {
 }
 
 const createPost = async (req, res) => {
+  console.log('createPost req.body',req.body)
   try {
     const post = await new Post(req.body)
     await post.save()
@@ -74,8 +75,6 @@ const deletePost = async (req, res) => {
     errorHandler500(error, res)
   }
 }
-
-
 
 module.exports = {
   getPosts,

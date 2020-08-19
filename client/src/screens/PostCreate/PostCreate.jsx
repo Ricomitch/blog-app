@@ -1,9 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './PostCreate.css'
 import { Redirect } from 'react-router-dom';
-import { createPost } from '../../services/posts';
+import { createPost, getUsers  } from '../../services/posts';
 
 const PostCreate = (props) => {
+
+  useEffect(() => {
+    fetchUsers()
+  }, [])
+    
+  const [users, updateUsers] = useState([])
+
+  const fetchUsers = async () => {
+    const users = await getUsers()
+    updateUsers(users)
+  }
 
   const [post, setPost] = useState({
     title: '',
@@ -34,7 +45,7 @@ const PostCreate = (props) => {
   }
 
   return (
-    <form className='create-form' onSubmit={(e)=>handleSubmit(e)}>
+    <form className='create-form' onSubmit={(e) => post.userId==='' ? alert('Please select an author') : handleSubmit(e)}>
       <input
         className='input-title'
         placeholder='Title'
@@ -62,14 +73,10 @@ const PostCreate = (props) => {
         required
         onChange={handleChange}
       />
-      <input
-        className='input-userId'
-        placeholder='User ID'
-        value={post.userId}
-        name='userId'
-        required
-        onChange={handleChange}
-      />
+      <select name='userId' onChange={handleChange}>
+        <option name='mustSelect' value=''>Select Author</option>
+        {users.map(user => <option  value={user._id}>{user.username}</option>)}
+      </select>
       <button type='submit' className='submit-button'>Submit</button>
     </form>
   )

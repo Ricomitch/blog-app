@@ -51,12 +51,12 @@
 }
 
 .post .sub-title .summary-text {
-  letter-spacing: .9px;
+  letter-spacing: 0.9px;
 }
 
 @media screen and (min-width: 1240px) {
   .post {
-    scroll-snap-align: end;
+    scroll-snap-align: unset;
   }
 }
 /*# sourceMappingURL=Post.css.map */

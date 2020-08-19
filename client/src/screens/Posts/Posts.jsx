@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import Post from '../../components/Post/Post'
-import { getPosts } from '../../services/posts'
+import { getPosts,  } from '../../services/posts'
 import './Posts.css'
 
 function Posts() {
   const [allPosts, setAllPosts] = useState([])
   const [filteredPosts, setFilteredPosts] = useState([])
+
 
   useEffect(() => {
     const fetchPosts = async () => {

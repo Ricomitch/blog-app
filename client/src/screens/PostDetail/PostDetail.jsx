@@ -39,8 +39,8 @@ const PostDetail = (props) => {
           </button>
           <button
             className='delete-button'
-            onClick={() => {
-              deletePost(post._id);
+            onClick={async () => {
+              await deletePost(post._id);
               history.push('/posts');
             }}>
             Delete

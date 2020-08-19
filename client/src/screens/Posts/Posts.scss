@@ -1,0 +1,17 @@
+.posts {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 650px;
+  
+  a {
+    text-decoration: unset;
+    color: unset;
+  }
+}
+
+  @media screen and (min-width: 800px) {
+    .posts {
+      display: flex;
+      flex-flow: row wrap; 
+    }
+}

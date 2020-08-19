@@ -1,30 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import Post from '../../components/Post/Post'
-import { getPosts } from '../../services/posts'
+import { getPosts,  } from '../../services/posts'
 import './Posts.css'
 
 function Posts() {
   const [allPosts, setAllPosts] = useState([])
-  
+
   useEffect(() => {
     const fetchPosts = async () => {
       const posts = await getPosts()       
       setAllPosts(posts)
     }
-    
     fetchPosts()
   }, [])
-
-  const fetchPosts = async () => {
-    let posts = await getPosts()
-    // posts = posts.map(post => {
-    //   console.log('line 17',post.userId)
-    //   //return post.title = capitalized(post.title)
-    //   return post.title
-    // })
-    setAllPosts(posts)
-
-  }
   
   const capitalized = (input) => {
     let splitWords = input.split(' ')

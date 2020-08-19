@@ -51,6 +51,8 @@ textarea {
   border: none;
   box-shadow: 2px 2px 10px 2px #CECECE;
   cursor: pointer;
+  width: 140px;
+  align-self: center;
 }
 
 @media (max-width: 500px) {

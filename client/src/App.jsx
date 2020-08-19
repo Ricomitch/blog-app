@@ -6,11 +6,11 @@ import PostEdit from "./screens/PostEdit/PostEdit";
 import PostDetail from "./screens/PostDetail/PostDetail";
 import { Route, Switch } from "react-router-dom";
 import Nav from "./Nav";
+import Footer from "./Footer";
 
 const App = () => {
   return (
     <div className="app">
-    
       <Nav />
       <Switch>
         <Route exact path="/" component={Posts} />
@@ -19,8 +19,8 @@ const App = () => {
         <Route exact path="/posts/:id/edit" component={PostEdit} />
         <Route exact path="/posts/:id" component={PostDetail} />
       </Switch>
-      
-   </div>
+      <Footer />
+    </div>
   );
 };
 

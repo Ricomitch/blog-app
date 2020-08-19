@@ -1,6 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap");
 
 * {
   box-sizing: content-box;
@@ -17,9 +15,8 @@ nav a {
   font-size: 20px;
 }
 .blog-logo {
-  
   font-size: xx-large;
-  font-family: 'Coda Caption', sans-serif;
+  font-family: "Coda Caption", sans-serif;
   color: #1c7a96;
 }
 
@@ -28,15 +25,17 @@ nav a {
   display: flex;
   align-items: center;
   float: right;
-  margin-top: 1.0rem;
+  margin-top: 1rem;
   color: #1c7a96;
 }
-
-
 
 .add-post:hover {
   text-decoration: underline;
 }
 .home:hover {
   text-decoration: underline;
+}
+.footer {
+  text-align: center;
+  color: #1c7a96;
 }

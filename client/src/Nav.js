@@ -4,9 +4,15 @@ import { Link } from "react-router-dom";
 export default function Nav() {
   return (
     <nav>
-      <Link to="/">Blog-App </Link>
-      <Link to="/">Blogs </Link>
-      <Link to="/add-post">Create a blog post </Link>
+      <Link className="blog-logo" to="/">
+        BlogsApp{" "}
+      </Link>
+      <Link className="home" to="/">
+        Posts{" "}
+      </Link>
+      <Link className="add-post" to="/add-post">
+        Create Post{" "}
+      </Link>
     </nav>
   );
 }

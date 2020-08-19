@@ -8,7 +8,7 @@ function Post(props) {
   
   return (
     <>
-      <Link className="post" to={`/post/${props._id}`}>
+      <Link className="post" to={`/posts/${props._id}`}>
         <img src={props.imgURL}
           className="post-image" />
         <div className="post-title">{props.title}</div>

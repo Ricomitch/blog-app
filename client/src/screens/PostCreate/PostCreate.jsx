@@ -47,7 +47,7 @@ const PostCreate = (props) => {
         className='input-imgURL'
         placeholder='Image URL'
         value={post.imgURL}
-        name='imgUrl'
+        name='imgURL'
         required
         onChange={handleChange}
       />

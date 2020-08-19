@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Post from '../../components/Post/Post'
 import { getPosts } from '../../services/posts'
-import './Posts.css'
+import './main.css'
 
 function Posts() {
   const [allPosts, setAllPosts] = useState([])

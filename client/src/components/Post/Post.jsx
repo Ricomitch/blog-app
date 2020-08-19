@@ -1,11 +1,11 @@
 import React from 'react'
-import './Post.css'
+import './main.css'
 import { Link } from 'react-router-dom'
 
 function Post(props) {
   
   return (
-    <div className="story-wrapper">
+  
       <Link className="post" to={`/posts/${props._id}`}>
         <div className="img-title-container">
         <img src={props.imgURL}
@@ -15,7 +15,7 @@ function Post(props) {
         <div className="author">placeholder author name</div>
         <div className="summary-text">{`${props.textSample.substring(0, 100)}${props.textSample.substring(98, 100).includes('.') ? '' : '...'}`}</div>
       </Link>
-    </div>
+    
   )
 }
 

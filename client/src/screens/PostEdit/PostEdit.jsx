@@ -63,6 +63,7 @@ const PostEdit = (props) => {
             value={post.title}
             name='title'
             required
+            autofocus
             onChange={handleChange}
           />
           <textarea

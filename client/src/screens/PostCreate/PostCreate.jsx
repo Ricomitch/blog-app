@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './PostCreate.css'
 import { Redirect } from 'react-router-dom';
 import { createPost } from '../../services/posts';
 

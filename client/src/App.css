@@ -4,7 +4,7 @@
 nav {
   text-align: center;
   background-color: white;
-  box-shadow: 5px 10px 20px 2px rgba(0, 0, 0, 0.253) !important;
+  box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.253) !important;
 }
 nav a {
   margin: 5px 20px;
@@ -21,4 +21,11 @@ nav a {
 .home,
 .add-post {
   color: #1c7a96;
+}
+
+.add-post:hover {
+  text-decoration: underline;
+}
+.home:hover {
+  text-decoration: underline;
 }

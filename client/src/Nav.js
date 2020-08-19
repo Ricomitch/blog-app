@@ -11,7 +11,7 @@ export default function Nav() {
         Posts{" "}
       </Link>
       <Link className="add-post" to="/add-post">
-        Create a new post{" "}
+        Create Post{" "}
       </Link>
     </nav>
   );

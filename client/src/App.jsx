@@ -18,7 +18,6 @@ const App = () => {
         <Route exact path="/posts/:id/edit" component={PostEdit} />
         <Route exact path="/posts/:id" component={PostDetail} />
       </Switch>
-      <footer>I AM EVERYWHERE</footer>
     </div>
   );
 };

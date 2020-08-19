@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Post from '../../components/Post/Post'
-import { getPosts,  } from '../../services/posts'
+import { getPosts } from '../../services/posts'
 import './Posts.css'
 
 function Posts() {
@@ -24,10 +24,13 @@ function Posts() {
   }
 
   const handleFilter = (event) => {
-    const filter = event.target.innerText
-    console.log(allPosts[0].userId.username)
-    setFilteredPosts(allPosts.filter(post => post.userId.username === filter))
-
+    if (event.target.value === 'reset') {
+      setFilteredPosts(allPosts)
+      return
+    } else {
+      const filter = event.target.innerText
+      setFilteredPosts(allPosts.filter(post => post.userId.username === filter))
+    }
   }
 
   const postsJSX = filteredPosts.map((post, index) => {
@@ -52,6 +55,7 @@ function Posts() {
       <div className="posts">
         {postsJSX}
       </div>
+      {filteredPosts.length < allPosts.length ? <button value="reset" onClick={(e) => handleFilter(e)}>Reset</button> : ''}
     </div>
   )
 }

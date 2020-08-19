@@ -10,7 +10,7 @@ const errorHandler500 = (error, res) => {
 
 const getPosts = async (req, res) => {
   try {
-    const posts = await Post.find()
+    const posts = await Post.find().populate('userId')
     res.json(posts)
   } catch (error) {
     errorHandler500(error, res)

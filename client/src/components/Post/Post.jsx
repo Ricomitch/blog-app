@@ -12,7 +12,7 @@ function Post(props) {
           className="post-image" />
           <div className="post-title">{props.title}</div>
           </div>
-        <div className="author">placeholder author name</div>
+      <div className="author">{props.authorName}</div>
         <div className="summary-text">{`${props.textSample.substring(0, 100)}${props.textSample.substring(98, 100).includes('.') ? '' : '...'}`}</div>
       </Link>
     

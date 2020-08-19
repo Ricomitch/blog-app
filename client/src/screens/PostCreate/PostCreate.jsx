@@ -25,6 +25,7 @@ const PostCreate = (props) => {
   async function handleSubmit(event) {
     event.preventDefault()
     const created = await createPost(post)
+    console.log(created)
     setCreated({ created })
   }
 

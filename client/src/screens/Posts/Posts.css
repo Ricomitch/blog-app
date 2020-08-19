@@ -1,3 +1,7 @@
+
+body {
+  width: 100%;
+}
 .posts {
   overflow-y: scroll;
   -ms-scroll-snap-type: y mandatory;

@@ -75,14 +75,6 @@ const PostEdit = (props) => {
             required
             onChange={handleChange}
           />
-          <input
-            className='input-userId'
-            placeholder='User ID'
-            value={post.userId}
-            name='userId'
-            required
-            onChange={handleChange}
-          />
           <button type='submit' className='save-button'>Save</button>
         </form>
       </div>

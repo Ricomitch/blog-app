@@ -5,11 +5,12 @@ import PostCreate from "./screens/PostCreate/PostCreate";
 import PostEdit from "./screens/PostEdit/PostEdit";
 import PostDetail from "./screens/PostDetail/PostDetail";
 import { Route, Switch } from "react-router-dom";
+import Nav from "./Nav";
 
 const App = () => {
   return (
     <div className="app">
-      <nav>I AM EVERYWHERE</nav>
+      <Nav />
       <Switch>
         <Route exact path="/" component={Posts} />
         <Route exact path="/posts" component={Posts} />

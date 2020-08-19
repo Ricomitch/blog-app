@@ -33,7 +33,7 @@ const PostCreate = (props) => {
   }
 
   return (
-    <form className='create-form' onSubmit={handleSubmit}>
+    <form className='create-form' onSubmit={(e)=>handleSubmit(e)}>
       <input
         className='input-title'
         placeholder='Title'

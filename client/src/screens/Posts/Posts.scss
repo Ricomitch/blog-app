@@ -1,7 +1,7 @@
 .posts {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  height: 650px;
+  height: 90vh;
   
   a {
     text-decoration: unset;
@@ -10,6 +10,7 @@
 }
 
   @media screen and (min-width: 800px) {
+    
     .posts {
       display: flex;
       flex-flow: row wrap; 

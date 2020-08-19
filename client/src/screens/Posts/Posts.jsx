@@ -19,9 +19,9 @@ function Posts() {
   
   const capitalized = (input) => {
     let splitWords = input.split(' ')
-    console.log(splitWords)
-    const result = splitWords.map(word => `${word[0].toUpperCase()}${word.substring(1)}`)
-    
+    // console.log(splitWords)
+    const result = splitWords.map(word => `${word.charAt(0).toUpperCase()}${word.substring(1)}`)
+    console.log(result)
     return result.join(' ')
   }
   

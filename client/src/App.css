@@ -2,7 +2,6 @@
   box-sizing: content-box;
 }
 nav {
-  text-align: center;
   background-color: white;
   box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.253) !important;
 }
@@ -14,7 +13,8 @@ nav a {
   font-size: 20px;
 }
 .blog-logo {
-  margin-right: 100%;
+  margin-right: 20%;
+  margin-left: 20%;
   font-size: xx-large;
   color: #1c7a96;
 }

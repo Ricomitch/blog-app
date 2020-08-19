@@ -10,7 +10,7 @@ const errorHandler500 = (error, res) => {
 
 const getPosts = async (req, res) => {
   try {
-    const posts = await Post.find()
+    const posts = await Post.find().populate('userId')
     res.json(posts)
   } catch (error) {
     errorHandler500(error, res)
@@ -20,7 +20,7 @@ const getPosts = async (req, res) => {
 const getPost = async (req, res) => {
   try {
     const { id } = req.params
-    const post = await Post.findById(id)
+    const post = await Post.findById(id).populate('userId')
     if (post) {
       return res.json(post)
     }

@@ -8,10 +8,7 @@ function Posts() {
   
   useEffect(() => {
     const fetchPosts = async () => {
-      const posts = await getPosts()
-      posts.forEach(post => {
-        post.title = capitalized(post.title)
-      })
+      const posts = await getPosts()       
       setAllPosts(posts)
     }
     fetchPosts()
@@ -26,9 +23,11 @@ function Posts() {
   }
   
   const postsJSX = allPosts.map((post, index) => {
-    return <Post _id={post._id} title={post.title} imgURL={post.imgURL} textSample={post.content} key={index} />
+    console.log(post.userId.username)
+    return <Post _id={post._id} title={capitalized(post.title)} imgURL={post.imgURL} textSample={post.content} key={index} authorName={post.userId.username} />
   })
   
+  console.log(allPosts)
   return (
     <div className="posts-container">
       {/* <Search onSubmit={handleSubmit} onChange={handleSearch} />

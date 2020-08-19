@@ -10,6 +10,7 @@ import Nav from "./Nav";
 const App = () => {
   return (
     <div className="app">
+    
       <Nav />
       <Switch>
         <Route exact path="/" component={Posts} />
@@ -18,7 +19,8 @@ const App = () => {
         <Route exact path="/posts/:id/edit" component={PostEdit} />
         <Route exact path="/posts/:id" component={PostDetail} />
       </Switch>
-    </div>
+      
+   </div>
   );
 };
 

@@ -65,6 +65,7 @@ const PostEdit = (props) => {
             name='title'
             required
             autofocus
+            maxLength='27'
             onChange={handleChange}
           />
           <textarea

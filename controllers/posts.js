@@ -4,7 +4,7 @@ const db = require('../db/connection')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
-const errorHandler500 = (error) => {
+const errorHandler500 = (error, res) => {
   res.status(500).json({ error: error.message })
 }
 
@@ -13,7 +13,7 @@ const getPosts = async (req, res) => {
     const posts = await Post.find()
     res.json(posts)
   } catch (error) {
-    errorHandler500(error)
+    errorHandler500(error, res)
   }
 }
 
@@ -26,7 +26,7 @@ const getPost = async (req, res) => {
     }
     res.status(404).json({ message: 'Product not found!' })
   } catch (error) {
-    errorHandler500(error)
+    errorHandler500(error, res)
   }
 }
 
@@ -35,11 +35,9 @@ const getUsers = async (req, res) => {
     const users = await User.find().populate('posts')
     res.json(users)
   } catch (error) {
-    errorHandler500(error)
+    errorHandler500(error, res)
   }
 }
-
-
 
 const createPost = async (req, res) => {
   try {
@@ -47,7 +45,7 @@ const createPost = async (req, res) => {
     await post.save()
     res.status(201).json(post)
   } catch (error) {
-    errorHandler500(error)
+    errorHandler500(error, res)
   }
 }
 
@@ -73,7 +71,7 @@ const deletePost = async (req, res) => {
     }
     throw new Error("Post not found!")
   } catch (error) {
-    errorHandler500(error)
+    errorHandler500(error, res)
   }
 }
 

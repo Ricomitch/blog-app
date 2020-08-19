@@ -41,6 +41,7 @@ const PostCreate = (props) => {
         name='title'
         required
         autoFocus
+        maxLength='27'
         onChange={handleChange}
       />
       <input

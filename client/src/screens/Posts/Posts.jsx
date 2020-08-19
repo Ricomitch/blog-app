@@ -7,6 +7,10 @@ function Posts() {
   const [allPosts, setAllPosts] = useState([])
 
   useEffect(() => {
+    const fetchPosts = async () => {
+      const posts = await getPosts()       
+      setAllPosts(posts)
+    }
     
     fetchPosts()
   }, [])
@@ -24,23 +28,29 @@ function Posts() {
   
   const capitalized = (input) => {
     let splitWords = input.split(' ')
-    console.log(splitWords)
     const result = splitWords.map(word => `${word.charAt(0).toUpperCase()}${word.substring(1)}`)
     return result.join(' ')
   }
-  
 
+  const postsJSX = allPosts.map((post, index) => {
+    return (
+      <Post 
+        _id={post._id} 
+        title={capitalized(post.title)} 
+        imgURL={post.imgURL} 
+        textSample={post.content} 
+        authorName={post.userId.username} 
+        key={index} 
+        authorName={post.userId.username} 
+      />
+  )})
   
   return (
     <div className="posts-container">
       {/* <Search onSubmit={handleSubmit} onChange={handleSearch} />
       <Sort onSubmit={handleSubmit} onChange={handleSort} /> */}
       <div className="posts">
-        {allPosts.map((post, index) => {
-          console.log('line 36',allPosts)
-          console.log('line 37',post)
-          return <Post _id={post._id} title={post.title} imgURL={post.imgURL} textSample={post.content} authorName={post.userId.username} key={index} />
-        })}
+        {postsJSX}
       </div> 
     </div>
   )         

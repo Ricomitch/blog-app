@@ -3,7 +3,6 @@ import './PostCreate.css'
 import { Redirect } from 'react-router-dom';
 import { createPost, getUsers  } from '../../services/posts';
 
-
 const PostCreate = (props) => {
 
   useEffect(() => {
@@ -74,14 +73,6 @@ const PostCreate = (props) => {
         required
         onChange={handleChange}
       />
-      {/* <input
-        className='input-userId'
-        placeholder='User ID'
-        value={post.userId}
-        name='userId'
-        required
-        onChange={handleChange}
-      /> */}
       <select name='userId' onChange={handleChange}>
         <option name='mustSelect' value=''>Select Author</option>
         {users.map(user => <option  value={user._id}>{user.username}</option>)}

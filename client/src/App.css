@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap");
+
+* {
+  box-sizing: content-box;
+}
+
+.app {
+  display: flex;
+  flex-flow: column;
+}
+nav {
+  background-color: white;
+  box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.253) !important;
+}
+nav a {
+  margin: 5px 50px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+.blog-logo {
+  font-size: xx-large;
+  font-family: "Coda Caption", sans-serif;
+  color: #1c7a96;
+}
+
+.home,
+.add-post {
+  display: flex;
+  align-items: center;
+  float: right;
+  margin-top: 1rem;
+  color: #1c7a96;
+}
+
+.add-post:hover {
+  text-decoration: underline;
+}
+.home:hover {
+  text-decoration: underline;
+}
+.footer {
+  position: relative;
+  bottom: 0;
+  padding: 1rem, 0;
+  width: 100%;
+  margin: 0 auto;
+  
+  
+  text-align: center;
+  color: #1c7a96;
+}

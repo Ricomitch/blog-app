@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Asset&family=Monofett&display=swap");
+
+.post {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 375px;
+  scroll-snap-align: start;
+
+  .post-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 95%;
+    width: 95%;
+    color: white;
+    font-weight: 800;
+    font-size: 3.5rem;
+    overflow-wrap: break-word;
+  }
+
+  .img-title-container {
+    position: relative;
+    text-align: center;
+    img {
+      max-width: 100%;
+      filter: brightness(70%);
+    }
+    &:hover {
+      text-shadow: 1px 1px 4px black;
+      img {
+        filter: brightness(50%);
+      }
+    }
+  }
+  .sub-title {
+    .summary-text {
+      letter-spacing: 0.9px;
+    }
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .post {
+    scroll-snap-align: unset;
+  }
+}

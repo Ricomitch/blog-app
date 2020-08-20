@@ -2,7 +2,7 @@
 
 # Blog App 
 
-Your task is to build a blog using MongoDB, Mongoose, Express, and React
+Your task is to build a blog using MongoDB, Mongoose, Express, and React.
 
 1. Create a repo named blog-app on github.com **not** on git.generalassemb.ly
 2. Add your teammates as collaborators

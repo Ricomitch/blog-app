@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Asset&family=Monofett&display=swap");
+.post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 375px;
+  scroll-snap-align: start;
+  padding: 7px;
+}
+
+.post .post-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 65%;
+  width: 65%;
+  color: white;
+  font-weight: 800;
+  font-size: 2.5rem;
+  overflow-wrap: break-word;
+}
+
+.post .img-title-container {
+  position: relative;
+  text-align: center;
+  height: 300px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post .img-title-container img {
+  max-width: 100%;
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+}
+
+.post .img-title-container:hover {
+  text-shadow: 1px 1px 4px black;
+}
+
+.post .img-title-container:hover img {
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+
+.post .sub-title .summary-text {
+  letter-spacing: 0.9px;
+}
+.author {
+  padding: 3px;
+  color: blue;
+  cursor: pointer;
+}
+.post-image {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+
+@media screen and (min-width: 1240px) {
+  .post {
+    scroll-snap-align: unset;
+  }
+}
+/*# sourceMappingURL=Post.css.map */

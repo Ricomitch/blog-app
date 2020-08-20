@@ -1,0 +1,8 @@
+/node_modules
+.DS_Store
+
+# sass pre-loaders
+/client/src/components/Post/main.css.map
+/client/src/components/Post/main.scss
+/client/src/screens/Posts/main.css.map
+/client/src/screens/Posts/main.scss

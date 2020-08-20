@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const logger = require('morgan')
 const postRoutes = require('./routes/posts')
 const db = require('./db/connection')
-const PORT = process.envPORT || 3000
+const PORT = process.env.PORT || 3000
 
 const app = express()
 

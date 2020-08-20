@@ -27,6 +27,9 @@
 .post-detail-image-container {
   width: 40vw;
   margin: 0;
+  display: flex;
+  justify-content: center;
+
 }
 
 .post-detail-image {

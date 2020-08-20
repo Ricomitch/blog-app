@@ -14,6 +14,7 @@
   margin: 0 auto;
   width: 375px;
   scroll-snap-align: start;
+  padding: 7px;
 }
 
 .post .post-title {
@@ -22,17 +23,22 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  height: 95%;
-  width: 95%;
+  height: 65%;
+  width: 65%;
   color: white;
   font-weight: 800;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   overflow-wrap: break-word;
 }
 
 .post .img-title-container {
   position: relative;
   text-align: center;
+  height: 300px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .post .img-title-container img {
@@ -53,6 +59,16 @@
 .post .sub-title .summary-text {
   letter-spacing: 0.9px;
 }
+.author {
+  padding: 3px;
+  color: blue;
+  cursor: pointer;
+}
+.post-image {
+  max-height: 100%;
+  max-width: 100%;
+}
+
 
 @media screen and (min-width: 1240px) {
   .post {

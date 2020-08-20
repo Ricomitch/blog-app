@@ -4,7 +4,7 @@ import axios from "axios";
 let apiUrl;
 
 const apiUrls = {
-  production: "",
+  production: "https://murder-hornets-blog-app.herokuapp.com/api",
   development: "http://localhost:3000/api",
 };
 

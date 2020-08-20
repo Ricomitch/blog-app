@@ -13,7 +13,7 @@ function Post(props) {
           <div className="post-title">{props.title}</div>
         </div>
       </Link>
-      <div className="author" onClick={(e) => props.handleFilter(e)}>{props.authorName}</div>
+      <div>By: <span className="author" onClick={(e) => props.handleFilter(e)}>{props.authorName}</span></div>
       <Link className="post" to={`/posts/${props._id}`}>
         <div className="summary-text">{`${props.textSample.substring(0, 100)}${props.textSample.substring(98, 100).includes('.') ? '' : '...'}`}</div>
       </Link>

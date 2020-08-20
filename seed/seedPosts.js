@@ -13,7 +13,7 @@ const main = async () => {
     await user.save()
     for (let i = 0; i < 3; i++) {
       const post = new Post({
-        title: faker.company.catchPhrase().substr(0,27),
+        title: faker.company.catchPhrase().substr(0, 27),
         imgURL: faker.image.imageUrl(400, 300, undefined, true),
         content: faker.lorem.paragraphs(),
         userId: user._id,
@@ -23,32 +23,32 @@ const main = async () => {
   }
   
 
-//   const user2 = new User({ username: faker.internet.userName(), email: faker.internet.email() })
-//   await user2.save()
+  //   const user2 = new User({ username: faker.internet.userName(), email: faker.internet.email() })
+  //   await user2.save()
 
-//   const user3 = new User({ username: faker.internet.userName(), email: faker.internet.email() })
-//   await user3.save()
+  //   const user3 = new User({ username: faker.internet.userName(), email: faker.internet.email() })
+  //   await user3.save()
 
-//   const post1 = new Post({
-//     title: faker.company.catchPhrase().substr(0,27),
-//     imgURL: faker.image.imageUrl(400, 300, undefined, true),
-//     content: faker.lorem.paragraphs(),
-//     userId: user1._id,
-//   })
-//   await post1.save()
+  //   const post1 = new Post({
+  //     title: faker.company.catchPhrase().substr(0,27),
+  //     imgURL: faker.image.imageUrl(400, 300, undefined, true),
+  //     content: faker.lorem.paragraphs(),
+  //     userId: user1._id,
+  //   })
+  //   await post1.save()
 
-//   const post2 = new Post({
-//     title: faker.company.catchPhrase().substr(0,27),
-//     imgURL: faker.image.imageUrl(400, 300, undefined, true),
-//     content: faker.lorem.paragraphs(),
-//     userId: user2._id,
-//   })
-//   await post2.save()
+  //   const post2 = new Post({
+  //     title: faker.company.catchPhrase().substr(0,27),
+  //     imgURL: faker.image.imageUrl(400, 300, undefined, true),
+  //     content: faker.lorem.paragraphs(),
+  //     userId: user2._id,
+  //   })
+  //   await post2.save()
 
-//   user1.posts.push(post1)
-//   await user1.save()
-// }
-
+  //   user1.posts.push(post1)
+  //   await user1.save()
+  // }
+}
 
 const run = async () => {
   await main()

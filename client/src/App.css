@@ -3,6 +3,11 @@
 * {
   box-sizing: content-box;
 }
+
+.app {
+  display: flex;
+  flex-flow: column;
+}
 nav {
   background-color: white;
   box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.253) !important;
@@ -36,7 +41,11 @@ nav a {
   text-decoration: underline;
 }
 .footer {
-
+  position: relative;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+  margin: 0 auto;
   
   
   text-align: center;

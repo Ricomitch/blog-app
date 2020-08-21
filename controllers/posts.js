@@ -24,7 +24,7 @@ const getPost = async (req, res) => {
     if (post) {
       return res.json(post)
     }
-    res.status(404).json({ message: 'Product not found!' })
+    res.status(404).json({ message: 'Post not found!' })
   } catch (error) {
     errorHandler500(error, res)
   }
@@ -57,7 +57,7 @@ const updatePost = async (req, res) => {
       return errorHandler500(error)
     }
     if (!post) {
-      return res.status(404).json({ message: 'Product not found!' })
+      return res.status(404).json({ message: 'Post not found!' })
     }
     res.status(200).json(post)
   })

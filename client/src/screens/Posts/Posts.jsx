@@ -7,7 +7,6 @@ function Posts() {
   const [allPosts, setAllPosts] = useState([])
   const [filteredPosts, setFilteredPosts] = useState([])
 
-
   useEffect(() => {
     const fetchPosts = async () => {
       const posts = await getPosts()
@@ -19,7 +18,9 @@ function Posts() {
 
   const capitalized = (input) => {
     let splitWords = input.split(' ')
-    const result = splitWords.map(word => `${word.charAt(0).toUpperCase()}${word.substring(1)}`)
+    const result = splitWords.map(
+      (word) => `${word.charAt(0).toUpperCase()}${word.substring(1)}`
+    )
     return result.join(' ')
   }
 
@@ -29,7 +30,9 @@ function Posts() {
       return
     } else {
       const filter = event.target.innerText
-      setFilteredPosts(allPosts.filter(post => post.userId.username === filter))
+      setFilteredPosts(
+        allPosts.filter((post) => post.userId.username === filter)
+      )
     }
   }
 
@@ -49,13 +52,17 @@ function Posts() {
   })
 
   return (
-    <div className="posts-container">
+    <div className='posts-container'>
       {/* <Search onSubmit={handleSubmit} onChange={handleSearch} />
       <Sort onSubmit={handleSubmit} onChange={handleSort} /> */}
-      <div className="posts">
-        {postsJSX}
-      </div>
-      {filteredPosts.length < allPosts.length ? <button value="reset" onClick={(e) => handleFilter(e)}>Reset</button> : ''}
+      <div className='posts'>{postsJSX}</div>
+      {filteredPosts.length < allPosts.length ? (
+        <button value='reset' onClick={(e) => handleFilter(e)}>
+          Reset
+        </button>
+      ) : (
+        ''
+      )}
     </div>
   )
 }

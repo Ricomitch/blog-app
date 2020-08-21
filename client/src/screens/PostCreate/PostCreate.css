@@ -1,6 +1,6 @@
 .create-form {
   padding: 30px;
-  width: 500px;
+  width: 45vw;
   align-self: center;
   display: flex;
   margin-bottom: 10vh;
@@ -60,11 +60,13 @@ textarea {
   align-self: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .create-form {
-    padding-top: 150px;
+    width: 80vw;
   }
-
+  .input-imgURL {
+    padding-left: 0;
+  }
   input,
   textarea {
     font-size: 28px;
